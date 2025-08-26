@@ -4,7 +4,7 @@ class Solution {
         int n = nums.length;
         Arrays.sort(nums);
         int dupno = 0;
-        for(int i = 0; i<n; i++){
+        for(int i = 0; i<n-1; i++){
                 if(nums[i]==nums[i+1]){
                     dupno = nums[i];
                     break;
