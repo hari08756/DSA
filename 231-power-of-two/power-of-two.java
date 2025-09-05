@@ -1,14 +1,12 @@
 class Solution {
-    public static int pow(int a, int b){
+    public boolean isPowerOfTwo(int n) {
         int po = 1;
+        int b = n;
         while(b>1){
             po = po*2;
             b = b/2; 
         }
-        return po;
-    }
-    public boolean isPowerOfTwo(int n) {
-        if(n<=0 || n != pow(2,n)){
+        if(n<=0 || n != po){
             return false;
         }else{
             return true;
