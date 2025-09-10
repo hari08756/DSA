@@ -10,7 +10,6 @@ class Solution {
         while(n%5 == 0){
             n = n/5;
         }
-        if(n!=1) return false;
-        else return true;
+        return n==1;
     }
 }
