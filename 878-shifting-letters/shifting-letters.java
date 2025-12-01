@@ -10,8 +10,7 @@ class Solution {
         StringBuilder sb = new StringBuilder(s);
         for(int i = 0; i<n; i++){
             sb.setCharAt(i,(char)('a' +(sb.charAt(i) -'a' + prefixSum[i])%26));
-            s = sb.toString();
         }
-        return s;
+        return sb.toString();
     }
 }
