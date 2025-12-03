@@ -1,14 +1,20 @@
 class Solution {
     public void duplicateZeros(int[] arr) {
         int n = arr.length;
-        for(int left = 0; left<n; left++){
-            int right = n-1;
-            if(arr[left] == 0){
-                while(left<right){
-                    arr[right--] = arr[right];
-                }
-                arr[left++] = 0;
+        int [] nums = new int [n];
+        for(int i = 0, k = 0; i<n; i++){
+            if(k >= n) break;
+            if(arr[i] != 0){
+                nums[k++] = arr[i];
+            }else{
+                nums[k] = 0;
+                if(k >= n-1) break;
+                nums[k+1] = 0;
+                k += 2;
             }
+        }
+        for(int i = 0; i<n; i++){
+            arr[i] = nums[i];
         }
     }
 }
