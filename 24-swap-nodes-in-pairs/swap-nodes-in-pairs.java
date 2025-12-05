@@ -9,15 +9,12 @@
  * }
  */
 class Solution {
-    private ListNode recList(ListNode temp, ListNode head){
-        if(temp == null || temp.next == null) return head;
-        int t = temp.val;
-        temp.val = temp.next.val;
-        temp.next.val = t;
-        return recList(temp.next.next, head);
-    }
     public ListNode swapPairs(ListNode head) {
         if(head == null || head.next == null) return head;
-        return recList(head,head);
+        ListNode first = head;
+        ListNode second = head.next;
+        first.next = swapPairs(second.next);
+        second.next = first;
+        return second;
     }
 }
