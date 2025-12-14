@@ -9,7 +9,7 @@ class Solution {
             prefSum[i] = prefSum[i-1] + nums[i];
             minSum = Math.min(minSum,prefSum[i]);
         }
-        if(minSum < 0) minSum = -minSum;
+        minSum = Math.abs(minSum);
         return minSum +1;
     }
 }
