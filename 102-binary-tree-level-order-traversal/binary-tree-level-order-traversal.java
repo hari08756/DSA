@@ -7,7 +7,6 @@ class Solution {
         if(root == null) return;
         if(n == 1){
             listLevel.add(root.val);
-            return;
         }
         nthLevelElement(root.left, n-1, listLevel);
         nthLevelElement(root.right, n-1, listLevel);
