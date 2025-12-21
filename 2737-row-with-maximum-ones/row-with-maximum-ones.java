@@ -17,13 +17,6 @@ class Solution {
             }
         }
         int [] a = new int [2];
-        int idxj = 0;
-        for(int j = 0; j < n; j++){
-            if(mat[idx][j] == 1){
-                idxj = j;
-                break;
-            }
-        }
         a[0] = idx;
         a[1] = maxOne;
         return a;
