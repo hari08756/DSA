@@ -9,7 +9,6 @@ class Solution {
     }
     public TreeNode convertBST(TreeNode root) {
         sum = 0;
-        if(root == null) return null;
         maxBST(root);
         return root;
     }
