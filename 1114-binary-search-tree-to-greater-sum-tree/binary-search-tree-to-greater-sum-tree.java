@@ -1,15 +1,15 @@
 class Solution {
-    public void traverse(TreeNode root, int [] sum ){
+    public static int sum;
+    public void traverse(TreeNode root){
         if(root == null) return;
-        traverse(root.right, sum);
-        sum[0] += root.val;
-        root.val = sum[0];
-        traverse(root.left, sum);
+        traverse(root.right);
+        sum += root.val;
+        root.val = sum;
+        traverse(root.left);
     }
     public TreeNode bstToGst(TreeNode root) {
-        int [] sum = new int [1];
-        sum [0] = 0;
-        traverse(root, sum);
+        sum = 0;
+        traverse(root);
         return root;
     }
 }
