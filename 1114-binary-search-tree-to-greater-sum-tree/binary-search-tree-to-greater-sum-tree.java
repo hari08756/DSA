@@ -1,5 +1,5 @@
 class Solution {
-    public static int sum;
+    public int sum;
     public void traverse(TreeNode root){
         if(root == null) return;
         traverse(root.right);
@@ -8,7 +8,6 @@ class Solution {
         traverse(root.left);
     }
     public TreeNode bstToGst(TreeNode root) {
-        sum = 0;
         traverse(root);
         return root;
     }
